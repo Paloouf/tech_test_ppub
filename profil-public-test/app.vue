@@ -5,11 +5,12 @@
     <div>
       <div class="mx-auto max-w-screen-xl px-4 py-12">
         <div class="-m-4 flex flex-wrap items-center">
-          <!-- Loop through valid jobs -->
+          <!-- Loop jobs -->
           <div v-for="job in jobs" :key="job.id" class="w-full p-4 rounded">
             <!-- div link complete (img+text+sector) -->
             <JobCard :job="job" :baseUrl="baseUrl"/>
           </div>
+          <!-- test doomscrolling -->
           <div v-if="isLoading" class="text-center my-4">
             <span>Loading...</span>
           </div>
